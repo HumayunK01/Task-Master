@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TaskMaster - Todo List</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <link rel="shortcut icon" href="assets/target.png" type="image/x-icon">
+</head>
+<body>
+    <!-- Add Header -->
+    <header class="header">
+        <div class="logo">TaskMaster</div>
+        <div class="hamburger">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+        <nav class="nav-links">
+            <a href="index.html">
+                <i class="fas fa-home"></i>
+                <span>Home</span>
+            </a>
+            <a href="features.html">
+                <i class="fas fa-star"></i>
+                <span>Features</span>
+            </a>
+            <a href="pricing.html">
+                <i class="fas fa-tag"></i>
+                <span>Pricing</span>
+            </a>
+            <a href="todo.html" class="active">
+                <i class="fas fa-rocket"></i>
+                <span>Try Now</span>
+            </a>
+        </nav>
+    </header>
+
+    <!-- Todo Container -->
+    <div class="todo-container animate">
+        <div class="todo-wrapper animate">
+            <div class="todo-header">
+                <h2 class="todo-title animate">TaskMaster Todo List</h2>
+                <p class="todo-subtitle animate">Start organizing your tasks</p>
+            </div>
+            
+            <!-- Add form element and modify input group -->
+            <form class="todo-form" id="todoForm">
+                <div class="input-group animate">
+                    <input type="text" id="taskInput" placeholder="Add your task..." required>
+                    <button type="submit" id="addButton">
+                        <i class="fas fa-plus"></i>
+                    </button>
+                </div>
+            </form>
+
+            <div class="todo-content">
+                <ul id="taskList" class="task-list animate">
+                    <!-- Tasks will be added here dynamically -->
+                </ul>
+
+                <!-- Add empty state -->
+                <div class="empty-state" id="emptyState">
+                    <i class="fas fa-clipboard-list"></i>
+                    <p>No tasks yet. Add a task to get started!</p>
+                </div>
+            </div>
+
+            <div class="todo-footer animate">
+                <span id="taskCount" class="task-count">0 tasks pending</span>
+                <button id="clearAll" class="clear-btn">
+                    <i class="fas fa-trash-alt"></i>
+                    Clear All
+                </button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-section">
+                <h4>TaskMaster</h4>
+                <p>Simplify your life with the most intuitive todo app available.</p>
+            </div>
+            <div class="footer-section">
+                <h4>Quick Links</h4>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="features.html">Features</a></li>
+                    <li><a href="pricing.html">Pricing</a></li>
+                    <li><a href="todo.html">Try Now</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Resources</h4>
+                <ul>
+                    <li><a href="#">Blog</a></li>
+                    <li><a href="#">Help Center</a></li>
+                    <li><a href="#">Contact Us</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h4>Legal</h4>
+                <ul>
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms of Service</a></li>
+                    <li><a href="#">Cookie Policy</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 TaskMaster. All rights reserved.</p>
+        </div>
+    </footer>
+
+    <!-- Change script source to todo.js -->
+    <script src="js/todo.js"></script>
+</body>
+</html>
+
